@@ -95,3 +95,41 @@ def show_sentiment_trend(df):
     plt.tight_layout()  # Better spacing
 
     st.pyplot(fig, use_container_width=False)  # Added use_container_width=False
+    
+from wordcloud import WordCloud
+from nltk.corpus import stopwords   
+def show_wordcloud(comments, preprocess_comment):
+    """
+    comments: List[str]
+    preprocess_comment: function to clean text
+    """
+
+    if not comments:
+        st.warning("No comments available for word cloud")
+        return
+
+    # Preprocess comments
+    preprocessed_comments = [
+        preprocess_comment(comment) for comment in comments
+    ]
+
+    # Combine into single text
+    text = " ".join(preprocessed_comments)
+
+    if not text.strip():
+        st.warning("Text is empty after preprocessing")
+        return
+
+    # Generate word cloud
+    wordcloud = WordCloud(
+        width=900,
+        height=450,
+        background_color="black",
+        colormap="Blues",
+        stopwords=set(stopwords.words("english")),
+        collocations=False
+    ).generate(text)
+
+    # Display in Streamlit
+    st.subheader("☁️ Word Cloud")
+    st.image(wordcloud.to_array(), use_container_width=True)

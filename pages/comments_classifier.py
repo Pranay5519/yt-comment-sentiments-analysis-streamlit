@@ -3,7 +3,7 @@ import streamlit as st
 from classifier_agent import topic_graph
 from utils import fetch_comments, extract_youtube_video_id
 
-st.set_page_config(page_title="YouTube Topic Classifier", layout="wide")
+st.set_page_config(page_title="YouTube Comments Sentiment Analysis", layout="wide")
 st.header("🧠 YouTube Comment Topic Classification")
 
 # ----------------------------------
