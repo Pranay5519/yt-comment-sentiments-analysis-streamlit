@@ -1,4 +1,4 @@
-from api_helper import (
+from utils.api_helper import (
     fetch_comments_api,
     predict_comments,
     predict_with_timestamps_api,

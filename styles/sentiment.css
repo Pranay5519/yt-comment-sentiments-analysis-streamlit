@@ -1,0 +1,485 @@
+/* sentiment_analysis.css - Clean black & white theme */
+
+/* ============================================
+   Global & Body Styles
+   ============================================ */
+.stApp {
+    background-color: #0a0a0a;
+    color: #e8e8e8;
+}
+
+/* Main content container */
+.main .block-container {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    max-width: 1400px;
+}
+
+/* ============================================
+   Headers & Titles
+   ============================================ */
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #2a2a2a;
+}
+
+h2 {
+    font-size: 1.6rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+/* ============================================
+   Sidebar
+   ============================================ */
+section[data-testid="stSidebar"] {
+    background-color: #0f0f0f;
+    border-right: 1px solid #2a2a2a;
+}
+
+section[data-testid="stSidebar"] .stMarkdown {
+    color: #b8b8b8;
+}
+
+section[data-testid="stSidebar"] h1,
+section[data-testid="stSidebar"] h2,
+section[data-testid="stSidebar"] h3 {
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+/* ============================================
+   Tabs
+   ============================================ */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 8px;
+    background-color: #0a0a0a;
+    border-bottom: 1px solid #2a2a2a;
+    padding-bottom: 0;
+}
+
+.stTabs [data-baseweb="tab"] {
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-bottom: none;
+    border-radius: 6px 6px 0 0;
+    color: #b8b8b8;
+    padding: 0.6rem 1.2rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.stTabs [data-baseweb="tab"]:hover {
+    background-color: #222222;
+    color: #ffffff;
+}
+
+.stTabs [aria-selected="true"] {
+    background-color: #0a0a0a;
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
+.stTabs [data-baseweb="tab-panel"] {
+    padding-top: 1.5rem;
+}
+
+/* ============================================
+   Input Fields
+   ============================================ */
+.stTextInput > div > div > input {
+    background-color: #1a1a1a;
+    color: #e8e8e8;
+    border: 1px solid #333333;
+    border-radius: 6px;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.95rem;
+}
+
+.stTextInput > div > div > input:focus {
+    border-color: #555555;
+    box-shadow: 0 0 0 1px #555555;
+}
+
+.stTextInput > label {
+    color: #b8b8b8;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Password input specific styling */
+.stTextInput input[type="password"] {
+    letter-spacing: 0.1em;
+}
+
+/* ============================================
+   Slider
+   ============================================ */
+.stSlider > label {
+    color: #b8b8b8;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.stSlider [data-baseweb="slider"] {
+    background-color: #1a1a1a;
+}
+
+.stSlider [data-baseweb="slider"] [role="slider"] {
+    background-color: #ffffff;
+    border: 2px solid #0a0a0a;
+}
+
+.stSlider [data-baseweb="slider"] [data-testid="stTickBar"] {
+    background-color: #333333;
+}
+
+/* Slider value display */
+.stSlider [data-testid="stThumbValue"] {
+    color: #ffffff;
+}
+
+/* ============================================
+   Buttons
+   ============================================ */
+.stButton > button {
+    background-color: #ffffff;
+    color: #0a0a0a;
+    border: none;
+    border-radius: 6px;
+    padding: 0.6rem 1.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.stButton > button:hover {
+    background-color: #e0e0e0;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+.stButton > button:active {
+    background-color: #d0d0d0;
+    transform: translateY(1px);
+}
+
+/* Primary button variant */
+.stButton > button[kind="primary"] {
+    background-color: #ffffff;
+    color: #0a0a0a;
+}
+
+/* Secondary button variant */
+.stButton > button[kind="secondary"] {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border: 1px solid #444444;
+}
+
+.stButton > button[kind="secondary"]:hover {
+    background-color: #333333;
+    border-color: #555555;
+}
+
+/* ============================================
+   Metrics
+   ============================================ */
+[data-testid="stMetricValue"] {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+[data-testid="stMetricLabel"] {
+    color: #b8b8b8;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+[data-testid="stMetricDelta"] {
+    font-size: 0.9rem;
+}
+
+div[data-testid="metric-container"] {
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    padding: 1.2rem;
+    transition: all 0.2s ease;
+}
+
+div[data-testid="metric-container"]:hover {
+    background-color: #1f1f1f;
+    border-color: #333333;
+}
+
+/* ============================================
+   DataFrames & Tables
+   ============================================ */
+[data-testid="stDataFrame"] {
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 6px;
+}
+
+.dataframe {
+    background-color: #1a1a1a !important;
+    color: #e8e8e8 !important;
+}
+
+.dataframe th {
+    background-color: #222222 !important;
+    color: #ffffff !important;
+    font-weight: 600;
+    padding: 0.8rem !important;
+    border-bottom: 2px solid #333333 !important;
+}
+
+.dataframe td {
+    background-color: #1a1a1a !important;
+    color: #d0d0d0 !important;
+    padding: 0.7rem !important;
+    border-bottom: 1px solid #2a2a2a !important;
+}
+
+.dataframe tr:hover td {
+    background-color: #222222 !important;
+}
+
+/* ============================================
+   Expanders
+   ============================================ */
+.streamlit-expanderHeader {
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 6px;
+    color: #ffffff;
+    font-weight: 500;
+    padding: 0.8rem 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.streamlit-expanderHeader:hover {
+    background-color: #222222;
+    border-color: #333333;
+}
+
+.streamlit-expanderContent {
+    background-color: #151515;
+    border: 1px solid #2a2a2a;
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+    padding: 1rem;
+    margin-top: -6px;
+}
+
+/* ============================================
+   Alerts & Messages
+   ============================================ */
+.stAlert {
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 6px;
+    padding: 0.8rem 1rem;
+}
+
+.stSuccess {
+    background-color: #0d1f0d;
+    border-left: 4px solid #2d5f2d;
+    color: #90ee90;
+}
+
+.stError {
+    background-color: #1f0d0d;
+    border-left: 4px solid #5f2d2d;
+    color: #ff6b6b;
+}
+
+.stWarning {
+    background-color: #1f1f0d;
+    border-left: 4px solid #5f5f2d;
+    color: #ffd700;
+}
+
+.stInfo {
+    background-color: #0d1a1f;
+    border-left: 4px solid #2d4d5f;
+    color: #6bb6ff;
+}
+
+/* ============================================
+   Spinner
+   ============================================ */
+.stSpinner > div {
+    border-color: #ffffff transparent transparent transparent;
+}
+
+.stSpinner > div > div {
+    color: #ffffff;
+}
+
+/* ============================================
+   Images
+   ============================================ */
+img {
+    border-radius: 8px;
+    border: 1px solid #2a2a2a;
+}
+
+[data-testid="stImage"] {
+    background-color: #1a1a1a;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #2a2a2a;
+}
+
+/* ============================================
+   Columns
+   ============================================ */
+[data-testid="column"] {
+    background-color: transparent;
+    padding: 0.5rem;
+}
+
+/* ============================================
+   Markdown & Text
+   ============================================ */
+.stMarkdown {
+    color: #d0d0d0;
+    line-height: 1.6;
+}
+
+.stMarkdown strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.stMarkdown p {
+    margin-bottom: 0.8rem;
+}
+
+.stMarkdown a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.stMarkdown a:hover {
+    color: #d0d0d0;
+}
+
+/* ============================================
+   Footer & Dividers
+   ============================================ */
+hr {
+    border-color: #2a2a2a;
+    margin: 2rem 0;
+}
+
+/* ============================================
+   Scrollbar
+   ============================================ */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333333;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #444444;
+}
+
+/* ============================================
+   Session State & Cache Messages
+   ============================================ */
+.stCacheLoader {
+    color: #b8b8b8;
+}
+
+/* ============================================
+   Select Box & Dropdown
+   ============================================ */
+.stSelectbox > div > div {
+    background-color: #1a1a1a;
+    border: 1px solid #333333;
+    border-radius: 6px;
+}
+
+.stSelectbox > div > div:hover {
+    border-color: #555555;
+}
+
+.stSelectbox [data-baseweb="select"] {
+    background-color: #1a1a1a;
+}
+
+.stSelectbox option {
+    background-color: #1a1a1a;
+    color: #e8e8e8;
+}
+
+/* ============================================
+   Download Button
+   ============================================ */
+.stDownloadButton > button {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border: 1px solid #444444;
+}
+
+.stDownloadButton > button:hover {
+    background-color: #333333;
+    border-color: #555555;
+}
+
+/* ============================================
+   Misc Utilities
+   ============================================ */
+.element-container {
+    margin-bottom: 1rem;
+}
+
+/* Loading state overlay */
+.stProgress > div > div {
+    background-color: #ffffff;
+}
+
+.stProgress > div {
+    background-color: #2a2a2a;
+}
+
+/* Remove default Streamlit footer */
+footer {
+    visibility: hidden;
+}
+
+/* Custom footer styling */
+.stMarkdown:last-child {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #2a2a2a;
+    color: #888888;
+    text-align: center;
+}

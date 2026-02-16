@@ -1,8 +1,10 @@
 import streamlit as st
-from api_helper import *
+from utils.api_helper import *
 from collections import Counter
 import pandas as pd
-
+from utils.api_helper import extract_youtube_video_id
+from utils.basic_utils import load_css
+load_css(r"C:\Users\prana\Desktop\PROJECTS\yt-comment-streamlit\styles\sentiment.css")
 st.set_page_config(page_title="YouTube Sentiment Analysis", layout="wide")
 
 st.title("🎬 YouTube Comment Sentiment Analysis")
@@ -11,9 +13,10 @@ st.title("🎬 YouTube Comment Sentiment Analysis")
 with st.sidebar:
     st.header("⚙️ Configuration")
     api_key = st.text_input("YouTube API Key", type="password")
-    video_id = st.text_input("Video ID", placeholder="e.g., dQw4w9WgXcQ")
-    max_comments = st.slider("Max Comments", 10, 500, 100)
+    youtube_url = st.text_input("Enter Youtube url", placeholder="e.g., dQw4w9WgXcQ")
+    max_comments = st.slider("Max Comments", 10, 10000, 500)
 
+video_id = extract_youtube_video_id(youtube_url)
 # Main tabs
 tab1, tab2, tab3, tab4 = st.tabs(["📥 Fetch Comments", "🔮 Predict Sentiment", "📊 Analytics", "📈 Trends"])
 

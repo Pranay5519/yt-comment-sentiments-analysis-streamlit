@@ -1,7 +1,11 @@
 import os
 import streamlit as st
 from classifier_agent import topic_graph
-from api_helper import fetch_comments, extract_youtube_video_id
+from utils.api_helper import fetch_comments, extract_youtube_video_id
+from utils.basic_utils import load_css
+
+# Load CSS
+load_css(r"C:\Users\prana\Desktop\PROJECTS\yt-comment-streamlit\styles\topics.css")
 
 st.set_page_config(page_title="YouTube Comments Sentiment Analysis", layout="wide")
 st.header("🧠 YouTube Comment Topic Classification")
@@ -12,7 +16,8 @@ st.header("🧠 YouTube Comment Topic Classification")
 youtube_url = st.text_input("Enter YouTube Video URL")
 
 analyze_btn = st.button("Analyze Topics")
-max_comments = st.slider("Number of comments", 50, 500, 200)
+max_comments = st.slider("Number of comments", 50, 1000, 200)
+
 # ----------------------------------
 # Main logic
 # ----------------------------------
@@ -52,7 +57,7 @@ if analyze_btn:
     # ----------------------------------
     with st.spinner("Discovering topics & classifying comments..."):
         result = topic_graph.invoke({
-            "comments": list_of_comments[:20]  # important
+            "comments": list_of_comments[:200]  # important
         })
 
     topics = result["topics"]

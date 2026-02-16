@@ -1,0 +1,264 @@
+/* topic_comments.css - Clean black & white theme */
+
+/* ============================================
+   Global & Body Styles
+   ============================================ */
+.stApp {
+    background-color: #0a0a0a;
+    color: #e8e8e8;
+}
+
+/* Main content container */
+.main .block-container {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    max-width: 1200px;
+}
+
+/* ============================================
+   Headers
+   ============================================ */
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #2a2a2a;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* ============================================
+   Input Fields
+   ============================================ */
+.stTextInput > div > div > input {
+    background-color: #1a1a1a;
+    color: #e8e8e8;
+    border: 1px solid #333333;
+    border-radius: 6px;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.95rem;
+}
+
+.stTextInput > div > div > input:focus {
+    border-color: #555555;
+    box-shadow: 0 0 0 1px #555555;
+}
+
+.stTextInput > label {
+    color: #b8b8b8;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* ============================================
+   Slider
+   ============================================ */
+.stSlider > label {
+    color: #b8b8b8;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.stSlider [data-baseweb="slider"] {
+    background-color: #1a1a1a;
+}
+
+.stSlider [data-baseweb="slider"] [role="slider"] {
+    background-color: #ffffff;
+}
+
+.stSlider [data-baseweb="slider"] [data-testid="stTickBar"] {
+    background-color: #333333;
+}
+
+/* ============================================
+   Buttons
+   ============================================ */
+.stButton > button {
+    background-color: #ffffff;
+    color: #0a0a0a;
+    border: none;
+    border-radius: 6px;
+    padding: 0.6rem 1.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    width: auto;
+}
+
+.stButton > button:hover {
+    background-color: #e0e0e0;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+.stButton > button:active {
+    background-color: #d0d0d0;
+    transform: translateY(1px);
+}
+
+/* ============================================
+   Expanders
+   ============================================ */
+.streamlit-expanderHeader {
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 6px;
+    color: #ffffff;
+    font-weight: 500;
+    padding: 0.8rem 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.streamlit-expanderHeader:hover {
+    background-color: #222222;
+    border-color: #333333;
+}
+
+.streamlit-expanderContent {
+    background-color: #151515;
+    border: 1px solid #2a2a2a;
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+    padding: 1rem;
+    margin-top: -6px;
+}
+
+/* ============================================
+   Alerts & Messages
+   ============================================ */
+.stAlert {
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 6px;
+    color: #e8e8e8;
+    padding: 0.8rem 1rem;
+}
+
+.stSuccess {
+    background-color: #0d1f0d;
+    border-color: #1a3d1a;
+    color: #90ee90;
+}
+
+.stError {
+    background-color: #1f0d0d;
+    border-color: #3d1a1a;
+    color: #ff6b6b;
+}
+
+.stWarning {
+    background-color: #1f1f0d;
+    border-color: #3d3d1a;
+    color: #ffd700;
+}
+
+/* ============================================
+   Spinner
+   ============================================ */
+.stSpinner > div {
+    border-color: #ffffff transparent transparent transparent;
+}
+
+/* ============================================
+   Markdown & Text
+   ============================================ */
+.stMarkdown {
+    color: #d0d0d0;
+    line-height: 1.6;
+}
+
+.stMarkdown strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.stMarkdown p {
+    margin-bottom: 0.8rem;
+}
+
+/* Comment text styling */
+.streamlit-expanderContent .stMarkdown {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.streamlit-expanderContent .stMarkdown p {
+    margin-bottom: 0.6rem;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid #1f1f1f;
+}
+
+.streamlit-expanderContent .stMarkdown p:last-child {
+    border-bottom: none;
+}
+
+/* ============================================
+   Sidebar (if used later)
+   ============================================ */
+section[data-testid="stSidebar"] {
+    background-color: #0f0f0f;
+    border-right: 1px solid #2a2a2a;
+}
+
+section[data-testid="stSidebar"] .stMarkdown {
+    color: #b8b8b8;
+}
+
+/* ============================================
+   Scrollbar
+   ============================================ */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333333;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #444444;
+}
+
+/* ============================================
+   Misc Utilities
+   ============================================ */
+hr {
+    border-color: #2a2a2a;
+    margin: 1.5rem 0;
+}
+
+/* Remove default streamlit branding color */
+a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #d0d0d0;
+}
+
+/* Improve spacing between elements */
+.element-container {
+    margin-bottom: 1rem;
+}
+
+/* Topic count badge effect */
+.streamlit-expanderHeader:after {
+    transition: opacity 0.2s ease;
+}

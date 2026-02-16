@@ -56,3 +56,10 @@ def generate_trend_graph(sentiment_data: List[Dict]) -> bytes:
     response = requests.post(url, json=payload)
     response.raise_for_status()
     return response.content
+
+import re
+
+def extract_youtube_video_id(url: str) -> str | None:
+    pattern = r"(?:youtu\.be/|v=|\/shorts\/|\/live\/|\/embed\/)([0-9A-Za-z_-]{11})"
+    match = re.search(pattern, url)
+    return match.group(1) if match else None
