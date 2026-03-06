@@ -16,7 +16,40 @@ st.markdown(
     '<div class="subtitle">End-to-End ML System for Real-Time YouTube Comment Intelligence</div>',
     unsafe_allow_html=True
 )
+# ----------------API CONFIGURATION ----------------
+st.markdown("""
+<div class="card">
+    <div class="section-header">🔑 API Configuration</div>
+</div>
+""", unsafe_allow_html=True)
 
+col1, col2 = st.columns(2)
+
+with col1:
+    youtube_key = st.text_input(
+        "YouTube API Key",
+        type="password",
+        value=st.session_state.get("youtube_api_key", "")
+    )
+
+with col2:
+    google_key = st.text_input(
+        "Google Gemini API Key",
+        type="password",
+        value=st.session_state.get("google_api_key", "")
+    )
+
+save_btn = st.button("Save API Keys")
+
+if save_btn:
+
+    if not youtube_key or not google_key:
+        st.error("Please provide both API keys")
+    else:
+        st.session_state["youtube_api_key"] = youtube_key
+        st.session_state["google_api_key"] = google_key
+        
+        st.success("API Keys saved for this session")
 # ----------------PROJECT OVERVIEW ----------------
 st.markdown("""
 <div class="card">
