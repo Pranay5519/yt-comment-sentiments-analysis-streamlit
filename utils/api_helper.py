@@ -64,5 +64,5 @@ def extract_youtube_video_id(url: str) -> str | None:
     match = re.search(pattern, url)
     return match.group(1) if match else None
 
-comments = fetch_comments(video_id="GWnSsjT4V68" , api_key="AIzaSyBQQ_Tt0PS_Lg9iUSVqux4gqDLLIiLzDrc" , max_comments=3)
+comments = fetch_comments(video_id="GWnSsjT4V68" , api_key="AIzaSyBQQ_Tt0PS_Lg9iUSVquvggghhhx4gqDLLIiLzDrc" , max_comments=3)
 print(comments)
