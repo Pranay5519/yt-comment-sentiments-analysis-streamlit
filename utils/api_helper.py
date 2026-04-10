@@ -3,7 +3,7 @@ from typing import List, Dict, Any
 from datetime import datetime
 
 # Base URL for the FastAPI server
-BASE_URL = "http://localhost:8000"
+BASE_URL = "http://localhost:8000/predict"
 
 def fetch_comments(video_id: str, api_key: str, max_comments: int = 100) -> List[Dict]:
     """Fetch comments from YouTube video"""
@@ -64,5 +64,6 @@ def extract_youtube_video_id(url: str) -> str | None:
     match = re.search(pattern, url)
     return match.group(1) if match else None
 
-comments = fetch_comments(video_id="GWnSsjT4V68" , api_key="AIzaSyBQQ_Tt0PS_Lg9iUSVquvggghhhx4gqDLLIiLzDrc" , max_comments=3)
-print(comments)
+
+# comments = fetch_comments(video_id="GWnSsjT4V68" , api_key="AIzaSyBQQ_Tt0PS_Lg9iUSVquvggghhhx4gqDLLIiLzDrc" , max_comments=3)
+# print(comments)

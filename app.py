@@ -1,5 +1,14 @@
 import streamlit as st
 from utils.basic_utils import load_css
+import nltk
+
+# Download NLTK data (needed for wordcloud/preprocessing)
+try:
+    nltk.download('stopwords')
+    nltk.download('wordnet')
+    nltk.download('omw-1.4')
+except Exception as e:
+    pass
 
 # ----------------PAGE CONFIG ----------------
 st.set_page_config(
@@ -8,7 +17,7 @@ st.set_page_config(
     layout="wide"
 )
 
-load_css(r"C:\Users\prana\Desktop\PROJECTS\yt-comment-streamlit\styles\home.css")
+load_css("styles/home.css")
 
 # ----------------HEADER ----------------
 st.markdown('<div class="main-title">🎥 YouTube Comments Analyzer</div>', unsafe_allow_html=True)
@@ -64,7 +73,6 @@ st.markdown("""
     </p>
 </div>
 """, unsafe_allow_html=True)
-
 
 # ----------------ML SENTIMENT MODULE ----------------
 st.markdown("""

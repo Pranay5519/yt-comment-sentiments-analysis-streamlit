@@ -5,7 +5,7 @@ import pandas as pd
 from utils.api_helper import extract_youtube_video_id
 from utils.basic_utils import load_css
 
-load_css(r"C:\Users\prana\Desktop\PROJECTS\yt-comment-streamlit\styles\sentiment.css")
+load_css("styles/sentiment.css")
 
 st.set_page_config(page_title="YouTube Sentiment Analysis", layout="wide")
 

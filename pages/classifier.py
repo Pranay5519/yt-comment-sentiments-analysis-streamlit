@@ -7,7 +7,7 @@ from utils.basic_utils import load_css
 # Page Setup
 # ----------------------------------
 
-load_css(r"C:\Users\prana\Desktop\PROJECTS\yt-comment-streamlit\styles\topics.css")
+load_css("styles/topics.css")
 
 st.set_page_config(page_title="YouTube Comments Topic Analysis", layout="wide")
 st.header("🧠 YouTube Comment Topic Classification")

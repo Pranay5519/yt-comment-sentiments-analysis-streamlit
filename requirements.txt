@@ -1,0 +1,16 @@
+streamlit
+pandas
+matplotlib
+wordcloud
+nltk
+requests
+langchain-google-genai
+langgraph
+pydantic
+python-dotenv
+mlflow
+joblib
+lightgbm
+dagshub
+scikit-learn
+numpy
